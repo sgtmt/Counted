@@ -17,12 +17,18 @@ class ViewController: UIViewController {
          data.text=String(atai);
             }
     var atai=0;
+    var redColor:CGFloat = 0
+    var blueColor:CGFloat = 0
+    var greenColor:CGFloat = 0
+    var alphaColor:CGFloat = 0
     
     
     @IBAction func countBtn(plusBtn: AnyObject) {
         atai += 1;
         ColorBtn()
-
+        redColor+=0.010
+        self.view.backgroundColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: alphaColor)
+        
         data.text=String(atai);
         
     }
