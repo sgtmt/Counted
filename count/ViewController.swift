@@ -14,24 +14,44 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
          data.text=String(atai);
             }
+    
     var atai=0;
     var redColor:CGFloat = 0
     var blueColor:CGFloat = 0
     var greenColor:CGFloat = 0
-    var alphaColor:CGFloat = 0
+    var alphaColor:CGFloat = 0.5
+  
+   
+   
     
-    
+       @IBOutlet weak var rgbSet: UILabel!
+
+    @IBAction func redBtn(sender: AnyObject) {
+        redColor+=0.4
+         backgroundColor()
+        
+    }
+    @IBAction func blueBtn(sender: AnyObject) {
+          blueColor+=0.4
+         backgroundColor()
+    }
     @IBAction func countBtn(plusBtn: AnyObject) {
         atai += 1;
         ColorBtn()
-        redColor+=0.010
-        self.view.backgroundColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: alphaColor)
+        
+        greenColor+=0.4
+      backgroundColor()
+        
         
         data.text=String(atai);
-        
+            }
+    func backgroundColor(){
+                self.view.backgroundColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: alphaColor)
     }
+    
     func sadPoint(){
 //        atai-1;
 //        if atai <= 0{
@@ -41,13 +61,15 @@ class ViewController: UIViewController {
         
         }
     func ColorBtn(){
+
+
         if atai%10 == 0{
             data.textColor = UIColor.redColor()
             }else{
             data.textColor = UIColor.blackColor()
 
         }
-    }
+            }
    
 
     override func didReceiveMemoryWarning() {
