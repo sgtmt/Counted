@@ -26,20 +26,24 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ha7-Hu-nea">
                                 <rect key="frame" x="122" y="142" width="53" height="30"/>
+                                <gestureRecognizers/>
                                 <state key="normal" title="blueBtn"/>
                                 <connections>
                                     <action selector="blueBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WQC-Iy-WHp"/>
+                                    <outletCollection property="gestureRecognizers" destination="tLH-s3-w4u" appends="YES" id="gRI-xQ-RdT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZK-BS-WzY">
                                 <rect key="frame" x="248" y="142" width="52" height="30"/>
+                                <gestureRecognizers/>
                                 <state key="normal" title="green"/>
                                 <connections>
                                     <action selector="greenBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0zh-6J-USl"/>
+                                    <outletCollection property="gestureRecognizers" destination="Em9-qf-gfO" appends="YES" id="JLi-DU-5Yg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIQ-CI-lv5">
-                                <rect key="frame" x="133" y="188" width="30" height="30"/>
+                                <rect key="frame" x="55" y="20" width="30" height="30"/>
                                 <state key="normal" title="plus"/>
                                 <connections>
                                     <action selector="countBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jBB-FU-Th4"/>
@@ -51,37 +55,38 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vse-0z-Qt6">
-                                <rect key="frame" x="20" y="142" width="46" height="30"/>
-                                <rect key="contentStretch" x="1" y="0.29999999999999999" width="1" height="1"/>
-                                <state key="normal" title="redBtn"/>
-                                <connections>
-                                    <action selector="redBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sgs-k0-BKm"/>
-                                </connections>
-                            </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ebd-zj-sjO">
                                 <rect key="frame" x="2" y="360" width="300" height="31"/>
+                                <connections>
+                                    <action selector="redSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="9iF-Bh-aE4"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UCl-01-3Qa">
                                 <rect key="frame" x="2" y="436" width="300" height="31"/>
+                                <connections>
+                                    <action selector="blueSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Lbr-Wp-P21"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rmw-iC-GPn">
                                 <rect key="frame" x="2" y="512" width="305" height="31"/>
+                                <connections>
+                                    <action selector="greenSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="azb-lB-q67"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49u-uq-boT">
-                                <rect key="frame" x="10" y="420" width="42" height="21"/>
+                                <rect key="frame" x="10" y="417" width="120" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncd-aP-248">
-                                <rect key="frame" x="10" y="331" width="42" height="21"/>
+                                <rect key="frame" x="10" y="331" width="120" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wa9-IN-FcV">
-                                <rect key="frame" x="10" y="490" width="42" height="21"/>
+                                <rect key="frame" x="10" y="486" width="130" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -92,20 +97,69 @@
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DJ1-e6-g8f">
                                         <rect key="frame" x="37" y="8" width="98" height="73"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsy-2b-gK7">
+                                <rect key="frame" x="133" y="186" width="47" height="30"/>
+                                <state key="normal" title="reSet"/>
+                                <connections>
+                                    <action selector="colorReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="560-1o-xcM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPb-Qe-xI1">
+                                <rect key="frame" x="225" y="20" width="30" height="30"/>
+                                <state key="normal" title="sad"/>
+                                <connections>
+                                    <action selector="sadBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ums-Me-R8F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vse-0z-Qt6">
+                                <rect key="frame" x="20" y="142" width="46" height="30"/>
+                                <rect key="contentStretch" x="1" y="0.29999999999999999" width="1" height="1"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="redBtn"/>
+                                <connections>
+                                    <action selector="redBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sgs-k0-BKm"/>
+                                    <outletCollection property="gestureRecognizers" destination="yEg-Bs-eEe" appends="YES" id="C2F-d7-j7j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="blueLabel" destination="49u-uq-boT" id="5QS-VZ-R75"/>
                         <outlet property="data" destination="hP0-eb-gKM" id="EYu-hk-JHI"/>
+                        <outlet property="greenLabel" destination="wa9-IN-FcV" id="9aZ-nT-gwH"/>
+                        <outlet property="redLabel" destination="Ncd-aP-248" id="eDI-bf-Otm"/>
                         <outlet property="rgbSet" destination="dVF-ae-CzX" id="I7V-UI-LyT"/>
+                        <outlet property="rgbView" destination="NCo-Xi-5LE" id="FQH-Tl-GLr"/>
+                        <outlet property="sadBtn" destination="iPb-Qe-xI1" id="1Fv-QA-zHm"/>
+                        <outlet property="silderBlue" destination="UCl-01-3Qa" id="PaK-LA-SrQ"/>
+                        <outlet property="silderGreen" destination="Rmw-iC-GPn" id="wXK-V0-5C7"/>
+                        <outlet property="silderRed" destination="ebd-zj-sjO" id="ZkH-fK-NlX"/>
+                        <outlet property="viewSet" destination="DJ1-e6-g8f" id="Eb8-gQ-oWI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="yEg-Bs-eEe">
+                    <connections>
+                        <action selector="redLongBtn:" destination="BYZ-38-t0r" id="m9Y-cw-G5m"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="tLH-s3-w4u">
+                    <connections>
+                        <action selector="blueLongBtn:" destination="BYZ-38-t0r" id="ITK-6C-L3T"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Em9-qf-gfO">
+                    <connections>
+                        <action selector="greenLongBtn:" destination="BYZ-38-t0r" id="u3a-fY-EvL"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="318" y="377"/>
         </scene>
